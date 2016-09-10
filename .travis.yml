@@ -7,7 +7,8 @@ deploy:
   provider: releases
   api_key:
     secure: Ly8O75yjUt2m4xT1rCuFwt0BvkoxeJ5I9wXhLe5j1UqhHyS+ek6GrAYN6CGXZcNs+hVm8aM1sSx5P0K8iGrK1xRfMi074Qo5i0Tpk3Vafuxzz5f+fNIn7aXMqEGPLSIfn12TNWdPfRd80zBgcteLg36aw4BT/7o8Fp/kUMjH0WHcqytKgArXn38s76eiVOe1Ho9f96qEhSUqWCpXN2UV2oi6wqMy3+ILl8OFidtCMVGBeu375QBICHg3gHqk0/vOiU1FTyB6nEiyJhK+f9QxWgqzO9O90B0vFK8RXF8vPqKAQvFDWUPLfmSu0x1iTO62CW1TMtUA9Ypaiw5w6GhpInDFPOeBsNw6HSOvMPJNtvnkkVsILjyMGhBRsRPOZj2JDnDORxIOOGQEIcpAQkF4imQpXByMN58houxsWehxiKQvATiqAhRvEEPNF/U1fZUblw2DRy+etDct/nHDcbXlSb+DOl53e5oJwk3aU5lCvgqgBUJ4Z3EWCkzYVPH1nVtlOZJtgm0QxSdHTVImSzjMVjDysAic4dZRokt9sE1IVJCu3eYGdP1pAJhfBJeoMPPeLyop18445s54OtKuAyAjo/AkZeYXMgtq51lmQBTP2Mdw/2aM8xMrgrMX43Ujq54FskD1PyU6OkH9ad6vGahRn8F6sKrgFxa0YO8QvwJ2hug=
-  file: "/home/travis/josselinchevalay/click-count/target/clickCount.war"
+  file: "target/clickCount.war"
+  skip_cleanup: true
   on:
     repo: josselinchevalay/click-count
 env:
