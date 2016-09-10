@@ -3,6 +3,9 @@ jdk:
 - oraclejdk8
 install:
 - mvn clean package
+before_deploy:
+   - ls 
+   - pwd
 deploy:
   provider: releases
   api_key:
