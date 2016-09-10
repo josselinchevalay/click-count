@@ -8,7 +8,7 @@ before_deploy:
   - git config --global user.name "Travis CI"
   - export GIT_TAG=$TRAVIS_BRANCH#$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
-  - git push -q https://$TAGPERM@github.com/RlonRyan/JBasicX --tags
+  - git push -q https://$TAGPERM@github.com/josselinchevalay/click-count/ --tags
 deploy:
   provider: release
   api_key:
