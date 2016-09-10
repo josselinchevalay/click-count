@@ -3,7 +3,7 @@ jdk:
 - oraclejdk8
 install:
 - mvn clean package
-before_deploy:
+before_build:
    - ls 
    - pwd
 deploy:
