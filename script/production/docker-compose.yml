@@ -1,0 +1,8 @@
+click-count:
+   image: glassfish
+   volumes:
+      - ./clickCount.war:/war/clickCount.war
+   extra_hosts:
+      - "redis:52.29.24.67"
+   ports:
+      - "80:8080"
