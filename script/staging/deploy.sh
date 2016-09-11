@@ -3,8 +3,8 @@ function log(){
    printf "[%s] %s %s \n" "$(date +'%d/%m/%Y %H:%M:%S')" "$1" "$2"
 }
 
-# first step: cleanp tmp & staging container
-log "INFO" "Staging process..."
+# First step : tmp directory and container cleaning
+log "INFO" "Staging in processing..."
 if [ -d tmp/ ]; then
 	rm -r tmp 
 	if [ $? ]; then
@@ -17,16 +17,16 @@ docker rm -f staging &> /dev/null
 # second step :  wget  source
 mkdir tmp & wget --no-check-certificate https://github.com/josselinchevalay/click-count/archive/master.tar.gz -O tmp/archive.zip &> /dev/null
 if [ $? ]; then
-	log "SUCCESS" "Get the new version successfully"
+	log "SUCCESS" "Retrieving the latest version successfully"
 fi
 
 # third step : unzip 
 tar zxf tmp/archive.zip -C tmp/
 if [ $? ]; then
-	log "SUCCESS" "Unzip project"
+	log "SUCCESS" "Unzip project successfully"
 fi
 
-# forth step : use docker maven for build project
+# fourth step : use docker maven for build project
 log "INFO" "Pull docker image : maven" & docker pull maven &> /dev/null 
 if [ $? ]; then 
         log "SUCCESS" "Pulling sucessfully"
@@ -36,7 +36,7 @@ if [ $? ]; then
 	fi
 fi
 
-# fith step : use docker to run glassfish
+# fifth  step : use docker to run glassfish
 log "INFO" "Pull docker image : galssefish " & docker pull glassfish &> /dev/null
 if [ $? ]; then
 	log "SUCCESS" "Pulling successfully"
